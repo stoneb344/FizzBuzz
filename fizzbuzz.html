@@ -1,0 +1,58 @@
+<head>
+	<style>
+		body {
+			background-color: lightblue;
+		}
+		h1 {
+			font-weight: bold;
+			background-color: blue;
+			color: white;
+		}
+		#fizzbuzz {
+			font-size: 20px;
+			color: blue;
+		}
+	</style>
+</head>
+<body>
+	<h1>&nbsp FizzBuzz</h1>
+	<p id="fizzbuzz"></p>
+</body>
+<script>
+	for (i = 1; i <= 100; i++) {
+		var use = "";
+		var display = document.getElementById("fizzbuzz");
+
+		if (i % 5 === 0) {
+			use += "Fizz";
+		}
+		if (i % 3 === 0) {
+			use += "Buzz";
+		}
+
+		console.log(use === "" ? i : use);
+
+		(use === "" ? display.insertAdjacentHTML("beforeEnd", i + "</br>")
+		: display.insertAdjacentHTML("beforeEnd", use + "</br>"));
+
+		/*
+		if (use == "") {
+			console.log(i);
+			display.innerHTML += i + "</br>";
+	 	} else {
+		 	console.log(use);
+			display.innerHTML += use + "</br>"
+		}
+		*/
+	}
+</script>
+
+<!--
+Print the numbers 1-100 in your console...
+if number is divisible by 5, print "fizz"
+if number is divisible by 3, print "buzz"
+if number is divisible by neither, print the number itself
+print fizzbuzz if the number is divisible by both
+
+to create a file, mkdir
+to create a textfile, touch -->
